@@ -1,0 +1,54 @@
+/* Загальний стиль */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ccc;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+/* Блоки */
+.box {
+    display: inline-block;
+    width: 250px;
+    padding: 15px;
+    margin: 20px;
+    border: 2px solid #999;
+    background-color: #fff;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+
+    position: relative;
+    vertical-align: top;
+}
+
+/* Заголовок */
+.box h2 {
+    margin-top: 10px;
+
+    text-shadow:
+        0 -1px 0 #ffffff,   /* світла тінь вверх */
+        0 2px 0 #555555;   /* темна тінь вниз */
+}
+
+/* Текст */
+.box p {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* "Наклейка" */
+.box::before {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 20px;
+    background: rgba(255, 255, 0, 0.6);
+
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+
+    margin-top: -30px;
+    margin-left: 80px;
+}
